@@ -1,0 +1,18 @@
+<%= stylesheet_link_tag "show", :media => "all" %>
+<h1>baystars</h1>
+<h3>Tweet詳細</h3>
+<div class="yokohama">
+
+  <p><%= @yokohama.home %></p>
+  <p><%= @yokohama.away %></p>
+  <p><%= @yokohama.hscore %></p>
+  <p><%= @yokohama.ascore %></p>
+  <p><%= @yokohama.about %></p>
+  <p><%= @yokohama.task %></p>
+  <p><%= @yokohama.created_at %></p>
+</div>
+<% if user_signed_in? && current_user.id == @yokohama.user_id %>
+      <%= link_to "編集する", edit_yokohama_path(@yokohama.id) %>
+      <%= button_to "削除する", yokohama_path(@yokohama.id), method: :delete %>
+    <% end %> 
+<%= link_to "Tweet一覧に戻る", yokohamas_path %>

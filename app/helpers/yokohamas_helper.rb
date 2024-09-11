@@ -1,0 +1,2 @@
+module YokohamasHelper
+end

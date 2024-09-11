@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Baystars</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <body>
+  <header> 
+   <div class="c"> 
+        <%= link_to yokohamas_top_path do %>
+        <%=image_tag 'DeNA アイコン.png', size:"80×80" %><br><% end %>
+    </div>
+   <div class="header-list">
+    <ul>
+     <% if user_signed_in? %>
+      <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+     <% else %>
+      <li><%= link_to "新規登録", new_user_registration_path %></li>
+      <li><%= link_to "ログイン", new_user_session_path %></li>
+     <% end %>
+    </ul>
+   </div>
+  </header>
+  
+  <main>
+   <%= yield %>
+  </main>
+
+  <footer>
+   <p>Copyright © GeekSalon All Rights Reserved.</p>
+  </footer>
+
+ </body>
+</html>

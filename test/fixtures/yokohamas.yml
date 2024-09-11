@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home: MyString
+  away: MyString
+  hscore: 1
+  ascore: 1
+  about: MyText
+  task: MyText
+
+two:
+  home: MyString
+  away: MyString
+  hscore: 1
+  ascore: 1
+  about: MyText
+  task: MyText

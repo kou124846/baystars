@@ -1,0 +1,28 @@
+<div class="backgroundresult">
+  <h1 class="kekka">試合結果</h1>
+
+  <h3 class="kekka">投稿を検索</h3>
+  <%= form_tag({controller:"yokohamas",action:"index"}, method: :get) do %>
+    <%= text_field_tag :search %>
+    <%= submit_tag '検索する'  %>
+  <% end %>
+
+  <%= link_to "新規投稿へ", new_yokohama_path %>
+  <div class="tweets-container">
+    <% @yokohamas.each do |t| %>  
+      <div class="tweet">
+        <%= image_tag t.image_url, size: "250x200" if t.image? %>
+        
+        <%= t.home %>
+        <%= t.away %>
+        <%= t.hscore %>
+        -
+        <%= t.ascore %>
+        <%= t.about %>
+        <%= t.task %>
+      </div>
+      <%= link_to "詳細へ", yokohama_path(t.id) %>
+
+    <% end %>
+  </div>
+</div>
