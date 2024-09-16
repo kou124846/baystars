@@ -109,6 +109,7 @@ h1{margin-left: 45%;}
   border: solid 6px blue;
   border-radius: 8px;
   height: 500px;
+  
 }
 .box26 .box-title {
   position: absolute;
@@ -160,4 +161,7 @@ h1{margin-left: 45%;}
 }
 .title{
   text-align: center;
+}
+.a{
+  margin-top: 210px;
 }

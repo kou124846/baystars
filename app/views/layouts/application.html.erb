@@ -17,14 +17,40 @@
         <%=image_tag 'DeNA アイコン.png', size:"80×80" %><br><% end %>
     </div>
    <div class="header-list">
-    <ul>
-     <% if user_signed_in? %>
-      <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-     <% else %>
-      <li><%= link_to "新規登録", new_user_registration_path %></li>
-      <li><%= link_to "ログイン", new_user_session_path %></li>
-     <% end %>
-    </ul>
+  
+ 
+    <div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+        <div class="menu-content">
+            <ul>
+                <li>
+                    <%= link_to 'アクセス', yokohamas_access_path %>
+                </li>
+                <li>
+                    <%= link_to '球団の歴史', yokohamas_history_path %>
+                </li>
+                <li>
+                    <%= link_to '選手・監督紹介', yokohamas_introduce_path %>
+                </li>
+                <li>
+                    <%= link_to '球団歌', yokohamas_sing_path %>
+                </li>
+                 <% if user_signed_in? %>
+                <li>
+                    <%= link_to 'ログアウト', '#', onclick: "document.getElementById('logout-form').submit();" %> <%= form_with url: destroy_user_session_path, method: :delete, id: 'logout-form', style: 'display: none;' do %> <% end %>
+                </li>
+                 <% else %>
+                <li>
+                    <%= link_to "新規登録", new_user_registration_path %>
+                </li>
+                <li>
+                    <%= link_to "ログイン", new_user_session_path %>
+                </li>
+                 <% end %>
+            </ul>
+        </div>
+    </div>
    </div>
   </header>
   

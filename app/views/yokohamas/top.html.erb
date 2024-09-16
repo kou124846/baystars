@@ -7,99 +7,56 @@
 
 </div>
 <br>
-<div class="slideshow1">    
-       <div class="slideshow-image" style="background-image: url('<%= asset_path 'ベイスターズ　風景1.jpg' %>');"></div>
-       <div class="slideshow-image" style="background-image: url('<%= asset_path 'ベイスターズ　風景2.jpg' %>');"></div>
-       <div class="slideshow-image" style="background-image: url('<%= asset_path 'ベイスターズ　風景3.jpg' %>');"></div>
+       <div class="slideshow1">    
+              <div class="slideshow-image" style="background-image: url('<%= asset_path 'ベイスターズ　風景1.jpg' %>');"></div>
+              <div class="slideshow-image" style="background-image: url('<%= asset_path 'ベイスターズ　風景2.jpg' %>');"></div>
+              <div class="slideshow-image" style="background-image: url('<%= asset_path 'ベイスターズ　風景3.jpg' %>');"></div>
+              
+       </div>
+
+       <%=image_tag '横浜　ポエム.jpg', size:"1250×500" %><br>
+       <div class="center">
        
-</div>
-
-<%=image_tag '横浜　ポエム.jpg', size:"1250×500" %><br>
-<div class="center">
-      
-       <div class="result">
-         <div class="e">
-                     <div class="box26">
-                            <span class="box-title">予定表</span>
-                            <p><div class="a"> 
-                            <%= link_to yokohamas_schedule_path do %>
-                            <%= image_tag '予定表　アイコン.jpg', size:"70×70", alt: "vv", class: "image" %>
-                            <% end %>
-                            <br>
-                            <%= link_to '予定表', yokohamas_schedule_path %>
-                            </br>      </p>
-                            </div>      
+              <div class="result">
+              <div class="e">
+                            <div class="box26">
+                                   <span class="box-title">予定表</span>
+                                   <p><div class="a"> 
+                                   <%= link_to yokohamas_schedule_path do %>
+                                   <%= image_tag '予定表　アイコン.jpg', size:"70×70", alt: "vv", class: "image" %>
+                                   <% end %>
+                                   <br>
+                                   <%= link_to '予定表', yokohamas_schedule_path %>
+                                   </br>      </p>
+                                   </div>      
+                            
+                            </div>
+                     <div class="box262">
+                            <span class="box-title">試合結果</span>
+                            <div class="game result">
+                                   <p> <%= @yokohama.home %>
+                                   <%= @yokohama.away %>
+                                   <%= @yokohama.hscore %> -
+                                   <%= @yokohama.ascore %><br>
+                                   <div class="link2">
+                                          <%= link_to "詳細へ", yokohamas_path %>
+                                   </div></p>
+                            </div>
+                     </div>
+              </div>
                      
-                     </div>
-              <div class="box262">
-                     <span class="box-title">試合結果</span>
-                     <div class="game result">
-                            <p> <%= @yokohama.home %>
-                            <%= @yokohama.away %>
-                            <%= @yokohama.hscore %> -
-                            <%= @yokohama.ascore %><br>
-                            <div class="link2">
-                                   <%= link_to "詳細へ", yokohamas_path %>
-                            </div></p>
-                     </div>
+                     
+                     
+                     
               </div>
-          </div>
-              
-              
-              
-                    
+
+              <br>
+              <div class="slideshow2">    
+                     <div class="slideshow-image2" style="background-image: url('<%= asset_path 'ハイライト1.jpg' %>');"></div>
+                     <div class="slideshow-image2" style="background-image: url('<%= asset_path 'ハイライト2.jpg' %>');"></div>
+                     <div class="slideshow-image2" style="background-image: url('<%= asset_path 'ハイライト3.jpg' %>');"></div>
+                     
+              </div>
        </div>
-
-       <br>
-       <div class="slideshow2">    
-              <div class="slideshow-image2" style="background-image: url('<%= asset_path 'ハイライト1.jpg' %>');"></div>
-              <div class="slideshow-image2" style="background-image: url('<%= asset_path 'ハイライト2.jpg' %>');"></div>
-              <div class="slideshow-image2" style="background-image: url('<%= asset_path 'ハイライト3.jpg' %>');"></div>
-              
-       </div>
-</div>
-</br>
-
-<div class="infomation">
-              
-              <div class="icon"> 
-              <%= link_to yokohamas_access_path do %>
-              <%= image_tag 'アクセスアイコン.jpg', size:"87×70", alt: "vv", class: "image" %>
-               <% end %>
-               <br>
-               <%= link_to 'アクセス', yokohamas_access_path %>
-               </br>      
-              </div>
-
-              <div class="icon"> 
-              <%= link_to yokohamas_history_path do %>
-              <%= image_tag '歴史　アイコン.jpg', size:"70×70", alt: "vv", class: "image" %>
-              <% end %>
-               <br>
-               <%= link_to '球団の歴史', yokohamas_history_path %>
-               </br>      
-              </div>
-
-              <div class="icon"> 
-              <%= link_to yokohamas_introduce_path do %>
-               <%= image_tag '紹介　アイコン.png', size:"70×70", alt: "vv", class: "image" %>
-              <% end %>
-               <br>
-               <%= link_to '選手・監督紹介', yokohamas_introduce_path %>
-               </br>      
-              </div>
-              
-              <div class="icon"> 
-              <%= link_to yokohamas_sing_path do %>
-              <%= image_tag '球団歌　アイコン.jpg', size:"70×70", alt: "vv", class: "image" %>
-              <% end %>
-               <br>
-               <%= link_to '球団歌', yokohamas_sing_path %>
-               </br>      
-              </div>
-
-              
-              
- </div>
-
+       </br>
      
