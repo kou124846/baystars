@@ -74,7 +74,7 @@
     height: 3px;
     width: 25px;
     border-radius: 3px;
-    background-color: #ffffff;
+    background-color: white;
     position: absolute;
 }
 .menu-btn span:before {
@@ -110,7 +110,7 @@
   padding: 70px 10px 0;
 }
 .menu-content ul li {
-  border-bottom: solid 1px #ffffff;
+  border-bottom: solid 1px white;
   list-style: none;
 }
 .menu-content ul li a {
