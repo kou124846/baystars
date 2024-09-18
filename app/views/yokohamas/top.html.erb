@@ -33,7 +33,7 @@
                             </div>
                      <div class="box262">
                             <span class="box-title">試合結果</span>
-                            <% if @yokohama.present?>
+                            <% if @yokohama.present? %>
                             <div class="game result">
                                    <p> <%= @yokohama.home %>
                                    <%= @yokohama.away %>
@@ -43,7 +43,7 @@
                                           <%= link_to "詳細へ", yokohamas_path %>
                                    </div></p>
                             </div>
-                                   <%end%>
+                                   <% end %>
                      </div>
               </div>
                      
