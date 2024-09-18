@@ -18,7 +18,7 @@
        <div class="center">
        
               <div class="result">
-              <div class="e">
+                     <div class="e">
                             <div class="box26">
                                    <span class="box-title">予定表</span>
                                    <p><div class="a"> 
@@ -31,28 +31,22 @@
                                    </div>      
                             
                             </div>
-                     <div class="box262">
-                            <span class="box-title">試合結果</span>
+                            <div class="box262">
+                                   <span class="box-title">試合結果</span>
                             
-                            <div class="game result">
-                                   <% if @yokohama.present? %>
-                                   <p> <%= @yokohama.home %>
-                                   <%= @yokohama.away %>
-                                   <%= @yokohama.hscore %> -
-                                   <%= @yokohama.ascore %><br>
-                                   <div class="link2">
-                                          <%= link_to "詳細へ", yokohamas_path %>
-                                   </div></p>
-                                   <% end %>
-                            </div>
-                           
-                                   
+                                   <div class="game result">
+                                          <% if @yokohama.present? %>
+                                          <p> <%= @yokohama.home %>
+                                          <%= @yokohama.away %>
+                                          <%= @yokohama.hscore %> -
+                                          <%= @yokohama.ascore %><br>
+                                          <div class="link2">
+                                                 <%= link_to "詳細へ", yokohamas_path %>
+                                          </div></p>
+                                          <% end %>
+                                   </div>
+                           </div>
                      </div>
-              </div>
-                     
-                     
-                     
-                     
               </div>
 
               <br>
